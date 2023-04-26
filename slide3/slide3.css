@@ -7,17 +7,4 @@
 	position: absolute;
 	width: 1024px;
 	height: 768px;
-	z-index: 1;
-}
-
-.glow {
-  position: absolute;
-  left: 215px;
-  top: 73px;
-  width: 156px;
-  height: 153px;
-  animation: flash 2s  infinite;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  z-index: 2;
 }

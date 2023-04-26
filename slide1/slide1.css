@@ -9,39 +9,3 @@
 	height: 768px;
 	z-index: 1;
 }
-
-.glow1 {
-  position: absolute;
-  left: 678px;
-  top: 325px;
-  width: 156px;
-  height: 153px;
-  animation: flash 2s  infinite;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  z-index: 2;
-}
-
-.glow2 {
-  position: absolute;
-  left: 665px;
-  top: 428px;
-  width: 156px;
-  height: 153px;
-  animation: flash 2s  infinite;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  z-index: 2;
-}
-
-.glow3 {
-  position: absolute;
-  left: 652px;
-  top: 532px;
-  width: 156px;
-  height: 153px;
-  animation: flash 2s  infinite;
-  animation-delay: 0s;
-  animation-fill-mode: both;
-  z-index: 2;
-}
