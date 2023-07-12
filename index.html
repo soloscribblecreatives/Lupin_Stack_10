@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="UTF-8"/>
-		<meta http-equiv="cache-control" content="max-age=200"/>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<title>Lupituss</title>
-		<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
-		<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
-		<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
-		<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
-		<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
+<meta charset="UTF-8"/>
+<meta http-equiv="cache-control" content="max-age=200"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>Blue Eyes</title>
+<link rel="stylesheet" type="text/css" href="animate.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="global.css" media="screen"/>
+
+<script src="jquery.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.mobile.custom.min.js" type="text/javascript" language="javascript"></script>
+<script src="jquery.touchSwipe.min.js" type="text/javascript" language="javascript"></script>
 </head>
 
 <body>
@@ -23,30 +24,16 @@
   <div class="reference active">
     <div class="box">
       <div class="slide_jumper">
-		<div class="slides"><img src="thumbs/01.png" alt=""></div>       
+		  <div class="slides"><img src="thumbs/01.png" alt=""></div>
       </div>
     </div>
     <div class="box_btn"></div>
   </div>
-  <div id="myconsole"></div>
-  <div id="click_through" > </div>
 </div>
-
+<div id="myconsole"></div>
+<div id="click_through" > </div>
 <script src="global.js" type="text/javascript" language="javascript"></script> 
 <script>
-var startTime = Date.now();
-//step 1:
-var temp = localStorage.getItem(currentContentId+"_"+contentName+"_slideNo_1");
-	
-	if(temp == null){			
-			localStorage.setItem(currentContentId+"_"+contentName+"_slideNo_1" ,startTime);
-			localStorage.setItem(currentContentId+"_"+contentName+"_totalTime_slideNo_1",0);
-			//to capture start time of 1st slide in db format
-			var startTime1InDBFormat = currentTimeInDatabaseFormat();
-			//alert(startTime1InDBFormat);
-			localStorage.setItem(currentContentId+"_"+contentName+"_StartTime_1" ,startTime1InDBFormat);
-	}
-//step 1 ends here..
 
 $(document).ready(function(){
   // jQuery(".next").bind(event, function(){
@@ -55,25 +42,34 @@ $(document).ready(function(){
 var selectedContentPath = 'slide1/';
 //  document.getElementById("main_content").innerHTML='<object type="text/html" width="1024px" height="768px" data="'+selectedContentPath+"Dlight1.htm"+'"></object>';
 
-//custom slide additional code begins here....
 
-if (typeof(localStorage.getItem("currentcustomslideflag"))!='undefined' && localStorage.getItem("currentcustomslideflag") =='true'){
-	var custcomslideid = parseInt(localStorage.getItem("currentcontentcustomslideId")) ;
-	
-	switch(custcomslideid){
-	case 1:
-	content='<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s1_2"><img src="slide1/s1_2.png" width="1024" height="768" alt=""></div><div class="s1_3"><img src="slide1/s1_3.png"></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s1_6"><img src="slide1/s1_7.png"></div><div class="s1_7"><img src="slide1/s1_7.png"></div><div class="s1_8"><img src="slide1/s1_7.png"></div><div class="s1_9"><img src="slide1/s1_6.png"></div><audio id="correct"><source src="slide1/Correct.mp3" type="audio/mpeg"></audio><audio id="wrong"><source src="slide1/Wrong.mp3" type="audio/mpeg"></audio><audio id="welcome"><source src="slide1/Welcome.mp3" type="audio/mpeg"></audio>';
-	break;
+$("#main_content").html('<div class="game"><div class="container"><div id="dice1" class="dice dice-one"><div id="dice-one-side-one" class="side one"><div class="dot one-1"></div></div><div id="dice-one-side-two" class="side two"><div class="dot two-1"></div><div class="dot two-2"></div></div><div id="dice-one-side-three" class="side three"><div class="dot three-1"></div><div class="dot three-2"></div><div class="dot three-3"></div></div><div id="dice-one-side-four" class="side four"><div class="dot four-1"></div><div class="dot four-2"></div><div class="dot four-3"></div><div class="dot four-4"></div></div><div id="dice-one-side-five" class="side five"><div class="dot five-1"></div><div class="dot five-2"></div><div class="dot five-3"></div><div class="dot five-4"></div><div class="dot five-5"></div></div><div id="dice-one-side-six" class="side six"><div class="dot six-1"></div><div class="dot six-2"></div><div class="dot six-3"></div><div class="dot six-4"></div><div class="dot six-5"></div><div class="dot six-6"></div></div></div></div><div id="roll" class="roll-button"><button onclick="myFunction(); console.log(diceOne);">Click Here To Play</button></div></div>');
+
+
+var elDiceOne = document.getElementById("dice1");
+var elComeOut = document.getElementById("roll");
+
+elComeOut.onclick = function() {rollDice();};
+
+function rollDice() {
+
+  var diceOne = Math.floor((Math.random() * 6) + 1);
+ 
+  console.log(diceOne);
+
+  for (var i = 1; i <= 6; i++) {
+    elDiceOne.classList.remove("show-" + i);
+    if (diceOne === i) {
+      elDiceOne.classList.add("show-" + i);
+	  
+	  if (diceOne == 2) {
+		alert("Clicked");
+	  }
+	  
+    }
+  }
 }
 
-	$("#main_content").html(content);
-	 localStorage.setItem("gotoNextPrevBrand" ,1);//if one than next if 2 than prev
-
-//custom slide additional code ends here....	 
-	 
-}else{
-	$("#main_content").html('<link rel="stylesheet" type="text/css" href="slide1/slide1.css" media="screen"/><div class="s1_1"><img src="slide1/s1_1.png" width="1024" height="768" alt=""></div><div class="s1_2"><img src="slide1/s1_2.png" width="1024" height="768" alt=""></div><div class="s1_3"><img src="slide1/s1_3.png"></div><div class="s1_4"><img src="slide1/s1_4.png"></div><div class="s1_5"><img src="slide1/s1_5.png"></div><div class="s1_6"><img src="slide1/s1_7.png"></div><div class="s1_7"><img src="slide1/s1_7.png"></div><div class="s1_8"><img src="slide1/s1_7.png"></div><div class="s1_9"><img src="slide1/s1_6.png"></div><audio id="correct"><source src="slide1/Correct.mp3" type="audio/mpeg"></audio><audio id="wrong"><source src="slide1/Wrong.mp3" type="audio/mpeg"></audio><audio id="welcome"><source src="slide1/Welcome.mp3" type="audio/mpeg"></audio>');
-}
 });
 </script> 
 
