@@ -12,11 +12,11 @@
 
 .s1_2 {
 	position: absolute;
-  left: 299px;
-  top: 120px;
-  width: 426px;
-  height: 96px;
-	animation: zoomInUp 1s;
+  left: 56px;
+  top: 143px;
+  width: 409px;
+  height: 166px;
+	animation: slideInDown 1s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 5;
@@ -24,12 +24,12 @@
 
 .s1_3 {
 	position: absolute;
-  left: 354px;
-  top: 393px;
-  width: 99px;
-  height: 98px;
-	animation: rotateInLoop 3s infinite linear;
-	animation-delay: 1.5s;
+  left: 479px;
+  top: 175px;
+  width: 402px;
+  height: 402px;
+	animation: flashIt 0.2s 5 linear;
+	animation-delay: 1s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
@@ -56,6 +56,17 @@
 	animation-delay: 4.5s;
 	animation-fill-mode: both;
 	z-index: 10;
+}
+
+
+@keyframes flashIt {
+  0%, 50%, 100% {
+    opacity: 0;
+  }
+
+  25%, 75% {
+    opacity: 1;
+  }
 }
 
 @keyframes rotateInLoop {

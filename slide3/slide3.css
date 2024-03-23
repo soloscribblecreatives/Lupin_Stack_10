@@ -24,8 +24,8 @@
 
 .s1_3 {
 	position: absolute;
-  left: 354px;
-  top: 393px;
+  left: 344px;
+  top: 401px;
   width: 99px;
   height: 98px;
 	animation: rotateInLoop 3s infinite linear;
@@ -36,8 +36,8 @@
 
 .s1_4 {
 	position: absolute;
-  left: 578px;
-  top: 393px;
+  left: 589px;
+  top: 401px;
   width: 99px;
   height: 98px;
 	animation: rotateInLoop 3s infinite linear;
@@ -48,9 +48,9 @@
 
 .s1_5 {
 	position: absolute;
-  left: 369px;
-  top: 432px;
-  width: 302px;
+  left: 359px;
+  top: 440px;
+  width: 323px;
   height: 26px;
 	animation: none 1s;
 	animation-delay: 4.5s;
