@@ -24,12 +24,12 @@
 
 .s1_3 {
 	position: absolute;
-  left: 479px;
-  top: 175px;
-  width: 402px;
-  height: 402px;
-	animation: flashIt 0.2s 5 linear;
-	animation-delay: 1s;
+  left: 498px;
+  top: 159px;
+  width: 380px;
+  height: 214px;
+	animation: flashIt 0.5s;
+	animation-delay: 1.5s;
 	animation-fill-mode: both;
 	z-index: 5;
 }
@@ -60,12 +60,15 @@
 
 
 @keyframes flashIt {
-  0%, 50%, 100% {
+  0% {
     opacity: 0;
   }
 
-  25%, 75% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

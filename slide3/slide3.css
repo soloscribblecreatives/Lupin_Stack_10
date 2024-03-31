@@ -16,7 +16,7 @@
   top: 120px;
   width: 426px;
   height: 96px;
-	animation: zoomInUp 1s;
+	animation: zoomIn 1s;
 	animation-delay: 0s;
 	animation-fill-mode: both;
 	z-index: 5;

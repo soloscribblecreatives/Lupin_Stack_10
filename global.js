@@ -263,7 +263,7 @@ switch(pg_id){
 	content='<link rel="stylesheet" type="text/css" href="slide4/slide4.css" media="screen"/><div class="s1_1"><img src="slide4/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide4/s1_2.png"/></div><div class="s1_3"><img src="slide4/s1_3.png"/></div>';
 	break;
 	case 5:
-	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="s1_1"><img src="slide5/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide5/s1_2.gif"/></div>';
+	content='<link rel="stylesheet" type="text/css" href="slide5/slide5.css" media="screen"/><div class="s1_1"><img src="slide5/s1_1.png" width="1024" height="768" alt=""/></div><div class="s1_2"><img src="slide5/s1_2.gif"/></div><div class="s1_3"><img src="slide5/s1_3.png"/></div>';
 	break;
 	case 6:
 	content='<link rel="stylesheet" type="text/css" href="slide6/slide6.css" media="screen"/><div class="s1_1"><img src="slide6/s1_1.png" width="1024" height="768" alt=""/></div>';
