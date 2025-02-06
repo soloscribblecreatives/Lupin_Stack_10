@@ -1,113 +1,15 @@
-*{
+* {
 	margin: 0px;
 	padding: 0px;
 }
 
-.s1 {
+.background {
 	position: absolute;
 	width: 1024px;
 	height: 768px;
-	z-index: 1;
+	z-index: -1;
 }
 
-.s2 {
-	position: absolute;
-  left: 564px;
-  top: 401px;
-  width: 118px;
-  height: 304px;
-	animation: rotator 1.5s;
-	animation-delay: 0.5s;
-	animation-fill-mode: both;
-	transform-origin: 60px 260px;
-	z-index: 5;
-}
-
-@keyframes rotator {
-  0% {
-    opacity: 1;
-    transform: rotate3d(0, 0, 1, 85deg);
-  }
-
-  100% {
-    opacity: 1;
-    transform: rotate3d(0, 0, 1, 0deg);
-  }
-}
-
-.s3 {
-	position: absolute;
-  left: 51px;
-  top: 267px;
-  width: 287px;
-  height: 27px;
-	animation: fadeInLeft 0.5s;
-	animation-delay: 2.5s;
-	animation-fill-mode: both;
-	z-index: 5;
-}
-
-.s4 {
-	position: absolute;
-  left: 53px;
-  top: 308px;
-  width: 220px;
-  height: 23px;
-	animation: fadeInLeft 0.5s;
-	animation-delay: 3.5s;
-	animation-fill-mode: both;
-	z-index: 5;
-}
-
-.s56 {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  	animation: fadeIn 0.1s;
-	animation-delay: 4.5s;
-	animation-fill-mode: both;
-  z-index: 5;
-}
-
-.s5 {
-	position: absolute;
-  left: 51px;
-  top: 348px;
-  width: 148px;
-  height: 45px;
-	animation: slideInRight 0.5s;
-	animation-delay: 4.5s;
-	animation-fill-mode: both;
-	z-index: 5;
-}
-
-.s6 {
-	position: absolute;
-  left: 50px;
-  top: 348px;
-  width: 120px;
-  height: 46px;
-	animation: glideIn 0.5s;
-	animation-delay: 4.5s;
-	animation-fill-mode: both;
-	z-index: 6;
-}
-
-
-@keyframes glideIn {
-  0% {
-	left: 50px;
-    top: 348px;
-    width: 120px;
-    height: 46px;
-    opacity: 1;
-  }
-
-  100% {
-	left: 150px;
-	top: 348px;
-	width: 120px;
-	height: 46px;
-    opacity: 1;
-  }
-}
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { padding: 10px 20px; margin: 20px; font-size: 16px; cursor: pointer; }
+        img { width: 80%; margin-top: 20px; border: 2px solid #333; }
