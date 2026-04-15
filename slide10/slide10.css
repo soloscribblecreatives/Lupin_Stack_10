@@ -1,13 +1,37 @@
-* {
+*{
 	margin: 0px;
 	padding: 0px;
 }
 
-.background {
+.s1 {
 	position: absolute;
 	width: 1080px;
 	height: 810px;
 	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 266px;
+  top: 448px;
+  width: 625px;
+  height: 254px;
+	animation: flashLongOff 1s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 5;
+}
+
+.s3 {
+	position: absolute;
+  left: 510px;
+  top: 454px;
+  width: 368px;
+  height: 185px;
+	animation: flashLongOff 0.5s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 15;
 }
 
 .flap {
@@ -41,4 +65,14 @@
 	animation-delay: 0.5s;
 	animation-fill-mode: both;
 	z-index: 5;
+}
+
+@keyframes flashLongOff {
+  0%,  100% {
+    opacity: 0;
+  }
+
+  25%, 50%, 75% {
+    opacity: 1;
+  }
 }

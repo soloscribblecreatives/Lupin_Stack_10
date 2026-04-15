@@ -1,13 +1,25 @@
-* {
+*{
 	margin: 0px;
 	padding: 0px;
 }
 
-.background {
+.s1 {
 	position: absolute;
 	width: 1080px;
 	height: 810px;
 	z-index: 1;
+}
+
+.s2 {
+	position: absolute;
+  left: 85px;
+  top: 385px;
+  width: 95px;
+  height: 87px;
+	animation: heartBeat 1s infinite;
+	animation-delay: 0s;
+	animation-fill-mode: both;
+	z-index: 5;
 }
 
 .flap {
